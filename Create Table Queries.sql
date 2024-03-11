@@ -20,4 +20,4 @@ CREATE TABLE filesync.License_keys (
     created_datetime DATETIME DEFAULT CURRENT_TIMESTAMP,
     last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES User(user_id)
-)
+);
