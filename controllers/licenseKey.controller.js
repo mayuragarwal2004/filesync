@@ -2,13 +2,10 @@ const {
   readLicenseKey,
   createLicenseKey,
 } = require("../models/licenseKey/licenseKey.queries.sql");
-const {
-  createUser,
-  validateUser,
-} = require("../models/users/user.queries.sql");
 
 const licenseKeyAuthController = async (req, res) => {
-  let { license_key } = req.query;
+  let { license_key, mac_address } = req.query;
+  console.log({ license_key, mac_address });
   if (!license_key) {
     return res.status(400).send("Insufficient inputs");
   }
